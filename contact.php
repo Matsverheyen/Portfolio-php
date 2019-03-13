@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
   <?php include 'components/nav.php' ?>
   <div class="cotainer">
     <div class="row ml-4">

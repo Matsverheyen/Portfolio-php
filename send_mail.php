@@ -1,11 +1,10 @@
 
 <?php
 $to = "mats@verheyen.me";
-
 if (isset($_POST['submit'])) {
 	if (!isset($_POST['name'])) {
 		echo "Naam is niet ingevuld!";
-	}//doe eens proberen 
+	}
 	elseif (!isset($_POST['email'])) {
 		echo 'Email is niet ingevuld!';
 	}
@@ -19,7 +18,7 @@ if (isset($_POST['submit'])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$subject = $_POST['subject'];
-		$msg = $_POST['msg'];
+    $msg = $_POST['msg'];
 		$headers = "From: testsite < " . $email . " >\n";
 		$headers.= "Cc: testsite < mail@testsite.com >\n";
 		$headers.= "X-Sender: testsite < " . $email . " >\n";
@@ -31,6 +30,7 @@ if (isset($_POST['submit'])) {
 			echo 'Email is niet geldig!';
 		} else {
       mail($to,$subject,$msg,$headers);
+      header("Location: contact.php");
     }
   }
 }
