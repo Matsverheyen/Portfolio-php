@@ -1,7 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 require_once('recaptchalib.php');
-  $privatekey = "your_private_key";
+  $privatekey = "6LecXpcUAAAAABJkStkFCS14oeALTVPPNaTmjuZF";
   $resp = recaptcha_check_answer ($privatekey,
                                 $_SERVER["REMOTE_ADDR"],
                                 $_POST["recaptcha_challenge_field"],
