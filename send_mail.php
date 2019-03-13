@@ -1,7 +1,8 @@
 <?php
 
-require 'vendor/autoload.php';
 
+require 'vendor/autoload.php';
+try { //upload diteens
 
 $to = "mats@verheyen.me";
 if (isset($_POST['submit'])) {
@@ -40,17 +41,17 @@ $email->addContent(
     "text/html", $msg
 );
 $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
-try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
     print_r($response->headers());
     print $response->body() . "\n";
     header("Location: contact.php");
-} catch (Exception $e) {
+    }
+
+  }
+}catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
 }
-    }
-  }
 }
 
 ?>
