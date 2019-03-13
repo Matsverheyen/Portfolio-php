@@ -1,7 +1,4 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-
 require 'vendor/autoload.php';
 
 $to = "mats@verheyen.me";
@@ -46,6 +43,7 @@ try {
     print $response->statusCode() . "\n";
     print_r($response->headers());
     print $response->body() . "\n";
+    header('Location: contact.php');
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
 }
