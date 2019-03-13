@@ -1,5 +1,12 @@
 <?php
 require 'vendor/autoload.php';
+require_once('recaptchalib.php');
+  $privatekey = "your_private_key";
+  $resp = recaptcha_check_answer ($privatekey,
+                                $_SERVER["REMOTE_ADDR"],
+                                $_POST["recaptcha_challenge_field"],
+                                $_POST["recaptcha_response_field"]);
+
 
 $to = "mats@verheyen.me";
 if (isset($_POST['submit'])) {
@@ -20,24 +27,21 @@ if (isset($_POST['submit'])) {
 		$email = $_POST['email'];
 		$subject = $_POST['subject'];
     $msg = $_POST['msg'];
-		$headers = "From: testsite < " . $email . " >\n";
-		$headers.= "Cc: testsite < mail@testsite.com >\n";
-		$headers.= "X-Sender: testsite < " . $email . " >\n";
-		$headers.= 'X-Mailer: PHP/' . phpversion();
-		$headers.= "Return-Path: " . $to . "\n";
-		$headers.= "MIME-Version: 1.0\r\n";
-		$headers.= "Content-Type: text/html; charset=iso-8859-1\n";
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			echo 'Email is niet geldig!';
 		} else {
 $email = new \SendGrid\Mail\Mail(); 
-$email->setFrom("mats@verheyen.me");
+$email->setFrom($email);
 $email->setSubject($subject);
 $email->addTo($to, "Mats Verheyen");
 $email->addContent(
     "text/html", $msg
 );
-$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+
+if (!$resp->is_valid) {
+  echo "Error";   
+} else {
+  $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
@@ -46,9 +50,9 @@ try {
     header('Location: contact.php');
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
-}
+        }
+      }
     }
-
   }
 }
 

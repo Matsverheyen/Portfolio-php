@@ -14,6 +14,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <title>Contact | Mats Verheyen</title>
 </head>
 
@@ -62,6 +63,11 @@
               <textarea name="msg" class="form-control" cols="30" rows="10" required></textarea>
             </div>
           </div>
+          <div class="g-recaptcha" data-sitekey="6LecXpcUAAAAAO6Lc3DfEiuuPyKxfEtXqyAK9RrV"></div>
+          <?php
+            require_once('recaptchalib.php');
+            $publickey = "6LecXpcUAAAAAO6Lc3DfEiuuPyKxfEtXqyAK9RrV";
+          ?>
           <div class="col-md-12">
             <div class="form-group">
               <input type="submit" name="submit" class="btn btn-primary" value="Send Message">
