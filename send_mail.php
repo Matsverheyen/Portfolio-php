@@ -1,5 +1,8 @@
-
 <?php
+
+require 'vendor/autoload.php';
+
+
 $to = "mats@verheyen.me";
 if (isset($_POST['submit'])) {
 	if (!isset($_POST['name'])) {
@@ -29,8 +32,23 @@ if (isset($_POST['submit'])) {
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			echo 'Email is niet geldig!';
 		} else {
-      mail($to,$subject,$msg,$headers);
-      header("Location: contact.php");
+$email = new \SendGrid\Mail\Mail(); 
+$email->setFrom($email, $name);
+$email->setSubject($subject);
+$email->addTo($to, "Mats Verheyen");
+$email->addContent(
+    "text/html", $msg
+);
+$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+try {
+    $response = $sendgrid->send($email);
+    print $response->statusCode() . "\n";
+    print_r($response->headers());
+    print $response->body() . "\n";
+    header("Location: contact.php");
+} catch (Exception $e) {
+    echo 'Caught exception: '. $e->getMessage() ."\n";
+}
     }
   }
 }
