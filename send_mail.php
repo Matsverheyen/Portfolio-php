@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 			echo 'Email is niet geldig!';
 		} else {
 $email = new \SendGrid\Mail\Mail(); 
-$email->setFrom($email, $name);
+$email->setFrom("mats@verheyen.me");
 $email->setSubject($subject);
 $email->addTo($to, "Mats Verheyen");
 $email->addContent(
