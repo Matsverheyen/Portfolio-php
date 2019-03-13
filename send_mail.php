@@ -2,7 +2,6 @@
 
 
 require 'vendor/autoload.php';
-try { //upload diteens
 
 $to = "mats@verheyen.me";
 if (isset($_POST['submit'])) {
@@ -49,9 +48,6 @@ $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
     }
 
   }
-}catch (Exception $e) {
-    echo 'Caught exception: '. $e->getMessage() ."\n";
-}
 }
 
 ?>
