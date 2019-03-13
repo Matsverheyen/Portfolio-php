@@ -44,7 +44,7 @@ $email->addContent(
                                 $_POST["recaptcha_challenge_field"],
                                 $_POST["recaptcha_response_field"]);
 
-if (!$resp->is_valid) {
+if ($resp-isvalid) {
   echo "Error";   
 } else {
   $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
