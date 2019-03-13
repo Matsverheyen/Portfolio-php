@@ -5,7 +5,6 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require 'vendor/autoload.php';
-require_once('recaptchalib.php');
 
 
 $to = "mats@verheyen.me";
@@ -38,15 +37,6 @@ $email->addContent(
     "text/html", $msg
 );
 
-  $privatekey = "6LecXpcUAAAAABJkStkFCS14oeALTVPPNaTmjuZF";
-  $resp = recaptcha_check_answer ($privatekey,
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
-
-if ($resp->isvalid) {
-  echo "Error";   
-} else {
   $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
     $response = $sendgrid->send($email);
@@ -56,7 +46,6 @@ try {
     header('Location: contact.php');
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
-        }
       }
     }
   }

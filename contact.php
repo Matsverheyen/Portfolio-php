@@ -63,11 +63,6 @@
               <textarea name="msg" class="form-control" cols="30" rows="10" required></textarea>
             </div>
           </div>
-          <div class="g-recaptcha" data-sitekey="6LecXpcUAAAAAO6Lc3DfEiuuPyKxfEtXqyAK9RrV"></div>
-          <?php
-            require_once('recaptchalib.php');
-            $publickey = "6LecXpcUAAAAAO6Lc3DfEiuuPyKxfEtXqyAK9RrV";
-          ?>
           <div class="col-md-12">
             <div class="form-group">
               <input type="submit" name="submit" class="btn btn-primary" value="Send Message">
