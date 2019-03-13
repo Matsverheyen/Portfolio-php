@@ -6,11 +6,6 @@ error_reporting(E_ALL);
 
 require 'vendor/autoload.php';
 require_once('recaptchalib.php');
-  $privatekey = "6LecXpcUAAAAABJkStkFCS14oeALTVPPNaTmjuZF";
-  $resp = recaptcha_check_answer ($privatekey,
-                                $_SERVER["REMOTE_ADDR"],
-                                $_POST["recaptcha_challenge_field"],
-                                $_POST["recaptcha_response_field"]);
 
 
 $to = "mats@verheyen.me";
@@ -42,6 +37,12 @@ $email->addTo($to, "Mats Verheyen");
 $email->addContent(
     "text/html", $msg
 );
+
+  $privatekey = "6LecXpcUAAAAABJkStkFCS14oeALTVPPNaTmjuZF";
+  $resp = recaptcha_check_answer ($privatekey,
+                                $_SERVER["REMOTE_ADDR"],
+                                $_POST["recaptcha_challenge_field"],
+                                $_POST["recaptcha_response_field"]);
 
 if (!$resp->is_valid) {
   echo "Error";   
