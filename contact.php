@@ -31,7 +31,7 @@
       <div class="col-md-3">
         <h3 class="ml-5">Contact Info</h3>
         <ul class="list-groups">
-          <li class="list-group-item"><a href=""></a>mats@verheyen.me</li>
+          <li class="list-group-item ml-sm-4"><a href=""></a>mats@verheyen.me</li>
         </ul>
       </div>
       <div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
