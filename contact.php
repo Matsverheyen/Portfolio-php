@@ -23,7 +23,7 @@
   <?php include 'components/nav.php' ?>
   <div class="cotainer">
     <div class="row ml-4">
-      <div class="col-md-8 col-md-offset-2 col-md-push-2">
+      <div class="custom-info col-md-8 col-md-offset-2 col-md-push-2">
         <h2>Contact Details</h2>
         <p>Feel free to contact me, leave a feedback or just write anything that you would like to say to me in the
           form down below.</p>
