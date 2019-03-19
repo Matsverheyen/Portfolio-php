@@ -1,3 +1,8 @@
 .custom-h3 {
   color: black;
 }
+
+.carousel-inner>.carousel-item>.view>img {
+  width: 540px;
+  height: 500px;
+}
