@@ -258,7 +258,7 @@
                 <div class="panel-body">
                      <h5><span class="label label-primary">Antwoord</span></h5>
 
-                    <p>geen idee</p>
+                    <p>Een functie waar je iets in meekan geven je geeft dit aan met haakjes</p>
                 </div>
             </div>
         </div>
