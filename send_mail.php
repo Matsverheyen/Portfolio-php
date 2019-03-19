@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 require 'vendor/autoload.php';
 
 
-$to = "mats@verheyen.me";
+$to = $_POST['email'];
 if (isset($_POST['submit'])) {
 	if (!isset($_POST['name'])) {
 		echo "Naam is niet ingevuld!";
