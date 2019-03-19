@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -13,80 +14,97 @@
 </head>
 <body>
 <?php include 'components/nav.php' ?>
-  <div class="card-columns mt-3 ml-3 mr-3">
-  <div class="card">
-  <img class="card-img-top" src="img/Goedemorgen.png" alt="Goedemorgen">
-  <div class="card-body">
-    <h5 class="card-title">Goedemorgen</h5>
-    <p class="card-text">PHP</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Goedemorgen" class="btn btn-primary">Github</a>
+<div id="carousel-gallery" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-gallery" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-gallery" data-slide-to="1"></li>
+    <li data-target="#carousel-gallery" data-slide-to="2"></li>
+    <li data-target="#carousel-gallery" data-slide-to="3"></li>
+    <li data-target="#carousel-gallery" data-slide-to="4"></li>
+    <li data-target="#carousel-gallery" data-slide-to="5"></li>
+    <li data-target="#carousel-gallery" data-slide-to="6"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="view">
+        <img class="d-block w-100" src="img/Goedemorgen.png" alt="First slide">
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">Goedemorgen</h3>
+        <p class="custom-h3">PHP</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="d-block w-100" src="img/Horeca.png" alt="Second slide">
+        <div class="mask rgba-black-strong"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">Horeca</h3>
+        <p class="custom-h3">Javascript</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="d-block w-100" src="img/Lingo.png" alt="Third slide">
+        <div class="mask rgba-black-slight"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">Lingo</h3>
+        <p class="custom-h3">Javascript</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="d-block w-100" src="img/Onkunde.png" alt="Fourth slide">
+        <div class="mask rgba-black-strong"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">Onkunde</h3>
+        <p class="custom-h3">PHP</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="d-block w-100" src="img/Pizza.png" alt="Fifth slide">
+        <div class="mask rgba-black-strong"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">Pizza Calculator</h3>
+        <p class="custom-h3">Javascript</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="d-block w-100" src="img/Robotarm.png" alt="Sixth slide">
+        <div class="mask rgba-black-strong"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">Robotarm</h3>
+        <p class="custom-h3">Javascript</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="view">
+        <img class="d-block w-100" src="img/Css.jpg" alt="Seventh slide">
+        <div class="mask rgba-black-strong"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive custom-h3">All over grid</h3>
+        <p class="custom-h3">CSS</p>
+      </div>
+    </div>
   </div>
+  <a class="carousel-control-prev" href="#carousel-gallery" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-gallery" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<div class="card">
-  <img class="card-img-top" src="img/Robotarm.png" alt="Robotarm">
-  <div class="card-body">
-    <h5 class="card-title">Robotarm</h5>
-    <p class="card-text">Javascript</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/robotarm-js-2018" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Pizza.png" alt="Pizza Calculator">
-  <div class="card-body">
-    <h5 class="card-title">Pizza Calculator</h5>
-    <p class="card-text">Javascript</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Pizza-Calculator" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Onkunde.png" alt="Onkunde">
-  <div class="card-body">
-    <h5 class="card-title">Onkunde</h5>
-    <p class="card-text">PHP</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Onkunde" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Lingo.png" alt="Lingo">
-  <div class="card-body">
-    <h5 class="card-title">Lingo</h5>
-    <p class="card-text">Javascript</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Lingo" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Horeca.png" alt="Horeca">
-  <div class="card-body">
-    <h5 class="card-title">Horeca</h5>
-    <p class="card-text">Javascript</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/HorecaApp" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Game.png" alt="Game">
-  <div class="card-body">
-    <h5 class="card-title">Game</h5>
-    <p class="card-text">Javascript</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Adventure-Game" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Css.png" alt="Allover">
-  <div class="card-body">
-    <h5 class="card-title">All over Grid</h5>
-    <p class="card-text">CSS</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Over-all-Grid" class="btn btn-primary">Github</a>
-  </div>
-</div>
-<div class="card">
-  <img class="card-img-top" src="img/Game2.png" alt="Game">
-  <div class="card-body">
-    <h5 class="card-title">Game</h5>
-    <p class="card-text">Javascript</p>
-    <a target="_blank" href="https://github.com/Matsverheyen/Adventure-game-2" class="btn btn-primary">Github</a>
-  </div>
-</div>
-  </div>
 <?php include 'components/footer.php' ?>
 </body>
 </html>
