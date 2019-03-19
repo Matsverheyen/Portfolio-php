@@ -1,0 +1,28 @@
+PHP tags = Een PHP tag in de tag die aangeeft dat er een PHP script begint, Dit geef je aan met &#60;?php 'Code hiertussen' ?>
+Boolean = Een Boolean is een expressie die alleen true of false kan zijn.
+Integer = Een integer is een getal dus bijvoorbeeld: 2 een getal zet je niet tussen quotes
+Float = Een float is een getal met punt dus bijvoorbeeld: 3.14 een float zet je niet tussen quotes
+String = Een string is een woord dus bijvoorbeeld: "woord" Een string geef je altijd aan met " of met ' 
+Array = Een array is een collectie van; Strings, integers, booleans of floats dit geef je aan met blokhaakjes dus bijvoorbeeld: ["woord1", "woord2", 3, True, "woord5"]
+Expressions = Een expression is iets wat een waarde heeft. Je kan hiervan een variable maken door een Dollar-teken '$' voor iets te zetten dus bijvoorbeeld: $1 = "Dit is getal één";
+elseif | else if = elseif of else if is een statement die letterlijk kijkt of ander wel de waarde is dus bijvoorbeeld: if 1+1 == 2 { echo 1 } elseif 1+1 == 3 { echo 3}
+foreach = Een foreach is een een manier om makkelijk dingen uit een array te halen. Hij doet het net zovaak als iets in de array staat dus als je foreach gebruikt, en er staan 3 dingen in een array dan doet de loop iets 3 keer en gebruikt die variable uit de array voor iets anders.
+break = Een break staat voor het einde van een switch statement
+continue = Continue gebruik je ook in een switch statements en die skipt alles en begint weer opnieuw
+switch = Een switch is in eigenlijk bijna het zelfde als meerdere if else statements alleen is het overichtelijker en kan je het makkelijker gebruiken
+function = een functie is een soort blok waarin een bepaalde code staat, dit maakt alles overzichtelijker en je kan code makkelijk hergebruiken.
+function arguments = argumenten die je kan meegeven in een fucntie die daarna in de functie zelf gebruikt worden.
+returning value = De return is iets wat de functie teruggeeft wanneer hij is aangeroepen
+variable function = Een functie waar je iets in meekan geven je geeft dit aan met haakjes
+date_sunset = geeft de tijd van de zonsopkomst van een bepaalde locatie
+cal_days_in_month = Geeft het aantal dagen in een maand weer
+chmod = Veranderd de permission van een bestand
+copy = Kopieert het bestand
+delete = Delete het bestand
+dirname = Geeft het pad waarin gewerkt wordt.
+disk_free_space = Laat de ruimte zien die beschikbaar is op een bepaalde schijf
+disk_total_space = Laat de totale ruimte op een schijf zien
+fopen = Opent een bestand of een URL
+fclose = Sluit het bestand of URL
+filesize = Laat de groote van het bestand zien
+mail = Stuurt een mail naar iemand, met headers. (Werkt niet op localhost, Je moet hiervoor een server met mailadress hebben.)
