@@ -41,8 +41,7 @@
             <div class="form-group">
               <input type="text" class="form-control" name="name" placeholder="Naam" required>
             </div>
-          </div>froot
-          
+          </div>
           <div class="col-md-6">
             <form method="post" action="send_mail.php">
             <div class="form-group">
